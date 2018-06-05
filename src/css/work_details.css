@@ -1,0 +1,133 @@
+#page.work-page {
+	background: #fff;
+	padding-bottom: 1rem;
+}
+#banner {
+	position: relative;
+	height: 4.6rem;
+	overflow: hidden;
+}
+#banner .picList {
+	width: 30rem;
+}
+#banner .picList li {
+	float: left;
+}
+#banner .picList img {
+	width: 7.5rem;
+}
+#banner .nav {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: .2rem;
+	height: .1rem;
+	font-size: 0;
+	text-align: center;
+}
+#banner .nav a {
+	margin: 0 .1rem;
+	vertical-align: top;
+	display: inline-block;
+	width: .3rem;
+	height: .1rem;
+	opacity: .5;
+}
+#banner .nav .active {
+	opacity: 1;
+}
+.work-title {
+	padding: .2rem .2rem;
+	font: bold .36rem/.7rem "微软雅黑";
+	color: #666;
+}
+.wrok-details {
+	padding: .2rem;
+	font: .26rem/.5rem "宋体";
+	color: #03987a;
+}
+.wrok-details p,
+.wrok-details h1,
+.wrok-details h2,
+.wrok-details h3,
+.wrok-details h4,
+.wrok-details h5,
+.wrok-details h6,
+.wrok-details ul,
+.message-con p,
+.message-con h1,
+.message-con h2,
+.message-con h3,
+.message-con h4,
+.message-con h5,
+.message-con h6,
+.message-con ul {
+	margin: .1rem 0 .05rem 0;
+	word-break: break-all;
+}  
+.message-con a,
+.wrok-details a {
+	color: #543cfd;
+}
+.wrok-details img {
+	display: block;
+	margin: .1rem auto ;
+	max-width: 80%;
+}
+.work-aside {
+	border-top: 1px solid #000;
+	height: 1rem;
+	margin: 0 .2rem;
+	line-height: 1rem;
+}
+.work-aside .good {
+	float: left;
+	font-size: .28rem;
+}
+.work-aside .icon-zan {
+	float: right;
+	font-size: .5rem;
+}
+.work-message aside {
+	margin: 0 .2rem;
+	border-top: 1px solid #000;
+}
+.message-info {
+	border-bottom: 1px solid #ccc;
+	font: .26rem/.8rem "宋体";
+}
+.message-info span {
+	color: red;
+}
+.message-con {
+	padding-left: .2rem;
+	word-break: break-all;
+	font: .26rem/.5rem "宋体";
+}
+.post-message {
+	position: fixed;
+	z-index: 30;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: .9rem;
+	background: #fff;
+}
+#message-btn {
+	position: fixed;
+	z-index: 30;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: .9rem;
+	background: #e15771;
+	color: #fff;
+	font: .36rem/.9rem "宋体";
+	text-align: center;
+	box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+}
+#message-btn:before {
+	font-size: .5rem;
+	vertical-align: top;
+	margin-right: .2rem;
+}

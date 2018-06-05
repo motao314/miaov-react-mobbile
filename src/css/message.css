@@ -1,0 +1,24 @@
+
+#page.messapge-page {
+	min-height: 100%;
+	box-sizing: border-box;
+}
+.message-txt {
+	margin: .2rem auto 0;
+	width: 6rem;
+	height: 2.4rem;
+	display: block;
+	border: 1px solid #ccc;
+}
+.btn{
+	display: block;
+    margin: .3rem auto 0;
+    width: 3.14rem;
+    height: .7rem;
+    background: linear-gradient(-62deg,#f72e6c,#fb88ba);
+    border-radius: .35rem;
+    box-shadow: 1px 1px 5px rgba(225, 86, 113, .5);
+    font: .3rem/.7rem "宋体";
+    text-align: center;
+    color: #fff;
+}   

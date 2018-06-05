@@ -1,0 +1,269 @@
+#banner {
+	position: relative;
+	height: 4.6rem;
+	overflow: hidden;
+}
+#banner .picList {
+	width: 30rem;
+}
+#banner .picList li {
+	float: left;
+}
+#banner .picList img {
+	width: 7.5rem;
+}
+#banner .nav {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: .2rem;
+	height: .1rem;
+	font-size: 0;
+	text-align: center;
+}
+#banner .nav a {
+	margin: 0 .1rem;
+	vertical-align: top;
+	display: inline-block;
+	width: .3rem;
+	height: .1rem;
+	background: #fff;
+	opacity: .5;
+}
+#banner .nav .active {
+	opacity: 1;
+}
+.curriculum {
+	overflow: hidden;
+	padding: .1rem;
+}
+.curriculum li {
+	float: left;
+	position: relative;
+	margin: .1rem;
+	width: 3.45rem;
+	height: 5.88rem;
+	padding-top: .50rem;
+	box-shadow: .01rem .02rem .1rem rgba(225, 236, 241, .75);
+	background: #fff url('../img/curriculum/bg1.png') no-repeat;
+	background-size: 100% auto;
+}
+.curriculum li:nth-of-type(2) {
+	background-image: url('../img/curriculum/bg2.png');
+}
+.curriculum li:nth-of-type(3) {
+	background-image: url('../img/curriculum/bg3.png');
+}
+.curriculum li:nth-of-type(4) {
+	background-image: url('../img/curriculum/bg4.png');
+}
+.curriculum .power {
+	margin: -.19rem auto 0;
+	width: 1.66rem;
+	font: .24rem/.36rem "宋体";
+	border: 1px solid rgba(255, 255, 255, .2);
+	color: #fff;
+	text-align: center;
+	border-radius: .18rem;
+}
+.curriculum .title {
+	margin: .11rem auto 0;
+	width: 2.3rem;
+	font: bold .32rem/.48rem "宋体";
+	color:  #fff;
+	text-align: center;
+}
+.curriculum .sub-title {
+	margin: .11rem auto 0;
+	width: 2.3rem;
+	font: .24rem/.28rem "宋体";
+	color:  #fff;
+	text-align: center;
+}
+.curriculum .price {
+	position: absolute;
+	top: 1.74rem;
+	left: .93rem;
+	width: 1.6rem;
+	height: 1.6rem;
+	background: rgba(255, 255, 255, .9);
+	border-radius: 50%;
+	font: .4rem/1.6rem "宋体";
+	text-align: center;
+}
+.curriculum li:nth-of-type(1) .price {
+	color: #f18cc4;
+}
+.curriculum li:nth-of-type(2) .price {
+	color: #4d9be2;
+}
+.curriculum li:nth-of-type(3) .price {
+	color: #f97f32;
+}
+.curriculum li:nth-of-type(4) .price {
+	color: #6ece51;
+}
+.curriculum .con {
+	position: absolute;
+	left: .24rem;
+	top: 3.92rem;
+	width: 2.98rem;
+	font: .24rem/.36rem "宋体";
+	color: #000;
+}
+.curriculum .con time {
+	display: block;
+	font: .36rem/.62rem "宋体";
+	text-align: center;
+}
+.curriculum .signUp {
+	position: absolute;
+	left: .65rem;
+	top: 5.46rem;
+	width: 2.16rem;
+	height: .76rem;
+	background: url('../img/btn.png');
+	background-size: cover;
+	font: .3rem/.64rem "宋体";
+	color:  #fff;
+	text-align: center;
+	letter-spacing: 3px;
+}
+.register-vip {
+	padding: .15rem .2rem .3rem;
+}
+.register-vip .title {
+	text-align: center;
+	font: .4rem/.82rem "宋体";
+	color: #000;
+}
+.vip-info {
+	font: .24rem/.4rem "宋体";
+	text-align: center;
+	color: #666;
+	padding: 0 .2rem;
+}
+.vip-price {
+	font: .36rem/.8rem "宋体";
+	text-align: center;
+	color: #e15671;
+}
+.vip-btn {
+	display: block;
+	margin: 0 auto;
+	width: 3.26rem;
+	height: .86rem;
+	font: .34rem/.76rem "宋体";
+	text-align: center;
+	color: #fff;
+	background: url('../img/vip-btn.png') no-repeat;
+	background-size: cover;
+}
+.miaov {
+	padding-top: .24rem;
+	background: #9dd474;
+}
+.miaov dt {
+	font: .4rem/.7rem "宋体";
+	text-align: center;
+	color: #fff;
+}
+.miaov dd {
+	position: relative;
+	display: flex;
+	padding: .2rem .2rem .2rem 1.8rem;
+	color: #fff;
+	min-height: 1.4rem;
+}
+.miaov dd::before {
+	position: absolute;
+	left: .2rem;
+	top: .2rem;
+	width: 1.4rem;
+	font-size: .7rem;
+	line-height: 1.4rem;
+	background: #fff;
+	text-align: center;
+	border-radius: .7rem;
+	box-shadow: 1px 2px 5px rgba(0,0,0,.1);
+}
+.miaov dd:nth-of-type(1)::before{
+	color: #66cde1;
+}
+.miaov dd:nth-of-type(2)::before{
+	color: #ff7868;
+}
+.miaov dd:nth-of-type(3)::before{
+	color: #9f6bcf;
+}
+.miaov dd p {
+	margin: auto;
+	font: .26rem/.4rem "宋体";
+}
+.wroks {
+	background: #fff;
+}
+.wroks-title {
+	padding-top: .15rem;
+	font: .4rem/1.02rem "宋体";
+	text-align: center;
+}
+.wroks-list {
+	padding: 0 .2rem;
+	overflow: hidden;
+}
+.wroks-list li {
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 3.55rem;
+}
+.wroks-list img {
+	width: 100%;
+}
+.wroks-info {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding-top: .36rem;
+	height: .54rem;
+	background: linear-gradient(0deg,rgba(0, 0, 0, .6),rgba(0, 0, 0, 0));
+	font: .26rem/.54rem "宋体";
+	color: #fff;
+}
+.works-title {
+	float: left;
+	padding-left: .15rem;
+	font-weight: normal;
+	max-width: 1.6rem;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.works-good {
+	float: right;
+	padding-right: .1rem;
+}
+.works-message {
+	float: right;
+}
+.works-more {
+	font: .3rem/.8rem "宋体";
+	text-align: center;
+}
+.works-more::before {
+	content: "";
+	display: inline-block;
+	padding: .15rem;
+	margin-right: .1rem;
+	background: url('../img/loading.gif') no-repeat;
+	background-size: cover;
+	line-height: 0;
+	font-size: 0;
+	vertical-align: middle;
+}
+.works-more span {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}

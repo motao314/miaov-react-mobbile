@@ -1,0 +1,71 @@
+#page.lecturer-page-wrap {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	background: url('../img/lecturer.png') no-repeat 0 .9rem !important;
+	background-size: 100% auto;
+}
+.lecturer-page {
+	flex: 1;
+}
+.lecturer-title {
+	padding-top: .5rem;
+	height: .76rem;
+	text-align: center;
+}
+.lecturer-title img {
+	height: 100%;
+}
+.lecturer-table {
+	margin: .62rem auto 0;
+	width: 7.1rem;
+}
+.lecturer-table th {
+	height: .5rem;
+	background: rgba(206, 115, 175, .5);
+	font-size: .24rem;
+	color: #fff;
+}
+.lecturer-table td {
+	height: .57rem;
+	font-size: .26rem;
+	background: #fff;
+	text-align: center;
+	border: 1px solid #ce73af;
+	color: #3a3a3a;
+}
+.lecturer-table td:nth-of-type(1) {
+	width: 1.35rem;
+}
+.lecturer-table td:nth-of-type(1) img {
+	width: .74rem;
+}
+.lecturer-table tr:nth-of-type(1) td:nth-of-type(2) {
+	width: 1.92rem;
+}
+.lecturer-more {
+	text-align: center;
+	height: 1.13rem;
+	font-size: .26rem;
+}
+.lecturer-more span {
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+	line-height: 1.13rem;
+	color: #fff;
+}
+.lecturer-more a {
+	display: inline-block;
+	width: 2.9rem;
+	line-height: .5rem;
+	border-radius: .25rem;
+	color: #2f88cd;
+	margin-left: .25rem;
+	background: #fff;
+}
