@@ -2,8 +2,12 @@
 	position: relative;
 	height: 4.6rem;
 	overflow: hidden;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
 }
 #banner .picList {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 	width: 30rem;
 }
 #banner .picList li {
