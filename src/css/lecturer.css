@@ -11,14 +11,23 @@
 .lecturer-title img {
 	height: .76rem;
 }
-.lecturer-tab {
+#lecturer-tab {
 	width: 100%;
 	overflow: hidden;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+#lecturer-tab .picList {
+	padding-top: .59rem;
+	overflow: hidden;
+}
+#lecturer-tab .picList>li {
+	float: left;
+	width: 7.5rem;
 }
 .lecturer-list {
-	width: 400%;
+	width: 7.5rem;
 	overflow: hidden;
-	padding-top: .59rem;
 }
 .lecturer-list li {
 	float: left;
@@ -45,12 +54,12 @@
 	color: #fff;
 	border-radius: .18rem;
 }
-.lecturer-nav {
+#lecturer-tab .nav {
 	padding-top: .4rem;
 	height: .1rem;
 	text-align: center;
 }
-.lecturer-nav a {
+#lecturer-tab .nav a {
 	vertical-align: top;
 	display: inline-block;
 	margin: 0 .1rem;
@@ -59,7 +68,7 @@
 	background: #fff;
 	opacity: .5;
 }
-.lecturer-nav .active {
+#lecturer-tab .nav .active {
 	opacity: 1;
 }
 .join-us-title {

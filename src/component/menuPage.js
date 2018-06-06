@@ -9,7 +9,7 @@ export default class MenuPage extends Component {
         };
     }
     openMenu=(isOpen)=>{
-        if(typeof isOpen == "undefined"){
+        if(typeof isOpen === "undefined"){
             isOpen = !this.state.isOpen;
         }
         this.setState({

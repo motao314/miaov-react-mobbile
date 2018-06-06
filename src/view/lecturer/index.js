@@ -7,14 +7,23 @@ import MenuPage from "../../component/menuPage";
 require('../../css/lecturer.css');
 
 export default class Lecturer extends Component {
+    constructor(arg){
+        super(arg);
+        this.state = {
+            isPopup: false,
+            popupData: {}
+        }
+    }
     render(){
         return (
-            <MenuPage>
-                <LecturerTab />
-                <JoinUs />
-                <JobDescription />
-                <Footer />
-            </MenuPage>
+            <div>
+                <MenuPage>
+                    <LecturerTab />
+                    <JoinUs />
+                    <JobDescription />
+                    <Footer />
+                </MenuPage>
+            </div>
         );
     }
 }

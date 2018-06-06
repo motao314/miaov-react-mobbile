@@ -1,4 +1,4 @@
-import React,{Component} from "react";
+import React from "react";
 export default function Miaov(){
     "use strict";
     return (<dl className="miaov">

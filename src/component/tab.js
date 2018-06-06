@@ -1,7 +1,7 @@
 import React,{Component} from "react";
 export default class Tab extends Component {
     tabSwipe=()=>{
-        if(!this.props.data.length) {
+        if(this.props.data.length <= 1) {
             return;
         }
         let active = 0;
