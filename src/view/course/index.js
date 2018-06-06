@@ -1,135 +1,85 @@
 import React,{Component} from "react";
 import Header from "../../component/header";
-import Menu from "../../component/menu";
 import Footer from "../../component/footer";
 require('../../css/course.css');
+
 
 export default class Course extends Component {
     render(){
         return (
             <div>
-                <Menu />
-                <div id="page">
-                    <Header isMenu={true} />
-                    <section className="course-item">
-                        <h2 className="course-title"><img src={require("../../img/course-title.png")} /></h2>
-                        <div className="course-tab">
-                            <ul className="course-list">
-                                <li>
-                                    <a href="javascript:;">
-                                        <div className="course-thumbnail"></div>
-                                        <p className="course-name">莫涛</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div className="course-thumbnail"></div>
-                                        <p className="course-name">莫涛</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div className="course-thumbnail"></div>
-                                        <p className="course-name">莫涛</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div className="course-thumbnail"></div>
-                                        <p className="course-name">莫涛</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div className="course-thumbnail"></div>
-                                        <p className="course-name">莫涛</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div className="course-thumbnail"></div>
-                                        <p className="course-name">莫涛</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div className="course-thumbnail"></div>
-                                        <p className="course-name">莫涛</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div className="course-thumbnail"></div>
-                                        <p className="course-name">莫涛</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">
-                                        <div className="course-thumbnail"></div>
-                                        <p className="course-name">莫涛</p>
-                                    </a>
-                                </li>
-                            </ul>
-                            <nav className="course-nav">
-                                <a href="javascript:;" className="active"></a><a href="javascript:;"></a><a href="javascript:;"></a><a href="javascript:;"></a>
-                            </nav>
-                        </div>
+                <nav id="nav">
+                    <a href="index.html" className="iconfont icon-home">首页</a>
+                    <a href="course.html" className="iconfont icon-kecheng">课程安排</a>
+                    <a href="lecturer.html" className="iconfont icon-peixunjiangshi">讲师团队</a>
+                </nav>
+                <div id="page" className="lecturer-page-wrap">
+                    <Header />
+                    <section className="lecturer-page">
+                        <h2 className="lecturer-title">
+                            <img src={require("../../img/lecturer-title.png")} />
+                        </h2>
+                        <table className="lecturer-table">
+                            <thead>
+                            <tr>
+                                <th>星期</th>
+                                <th>时间</th>
+                                <th>学习内容</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td rowSpan="2" className="lecturer-day-1"><img src={require("../../img/week-1.png")} /></td>
+                                <td>上午</td>
+                                <td>前端代码初始</td>
+                            </tr>
+                            <tr>
+                                <td>下午</td>
+                                <td>基本属性：背景，边框</td>
+                            </tr>
+                            <tr>
+                                <td rowSpan="2"  className="lecturer-day-2"><img src={require("../../img/week-2.png")} /></td>
+                                <td>上午</td>
+                                <td>H5标签与css选择器</td>
+                            </tr>
+                            <tr>
+                                <td>下午</td>
+                                <td>练习题</td>
+                            </tr>
+                            <tr>
+                                <td rowSpan="2" className="lecturer-day-3"><img src={require("../../img/week-3.png")} /></td>
+                                <td>上午</td>
+                                <td>浮动的深度剖析</td>
+                            </tr>
+                            <tr>
+                                <td>下午</td>
+                                <td>定位进阶</td>
+                            </tr>
+                            <tr>
+                                <td rowSpan="2" className="lecturer-day-4"><img src={require("../../img/week-4.png")} /></td>
+                                <td>上午</td>
+                                <td>表单详解</td>
+                            </tr>
+                            <tr>
+                                <td>下午</td>
+                                <td>表单的相关属性</td>
+                            </tr>
+                            <tr>
+                                <td className="lecturer-day-5"><img src={require("../../img/week-5.png")} /></td>
+                                <td>全天</td>
+                                <td>浏览器兼容性</td>
+                            </tr>
+                            <tr>
+                                <td className="lecturer-day-last"><img src={require("../../img/week-last.png")}/></td>
+                                <td colSpan="2">合理安排自己的时间，记得做联系哦！</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p className="lecturer-more">
+                            <span>更详情的课程安排请点击：</span><a href="#">www.miaov.com</a>
+                        </p>
                     </section>
-                    <section className="join-us">
-                        <h2 className="join-us-title">加入我们</h2>
-                        <ul className="join-con">
-                            <li className="join-course">
-                                <div className="join-box">
-                                    <span className="join-tag">NEW</span>
-                                    <h3 className="join-title">web讲师</h3>
-                                    <p className="join-info">人数：人数不限，多多益善</p>
-                                    <p className="join-info">薪资：面议</p>
-                                </div>
-                            </li>
-                            <li className="join-adviser">
-                                <div className="join-box">
-                                    <h3 className="join-title">课程顾问</h3>
-                                    <p className="join-info">人数：3人</p>
-                                    <p className="join-info">薪资：底薪+提成</p>
-                                </div>
-                            </li>
-                            <li className="join-service">
-                                <div className="join-box">
-                                    <h3 className="join-title">客服</h3>
-                                    <p className="join-info">人数：3人</p>
-                                    <p className="join-info">薪资：面议</p>
-                                </div>
-                            </li>
-                            <li className="join-assistant">
-                                <div className="join-box">
-                                    <h3 className="join-title">行政前台助理</h3>
-                                    <p className="join-info">人数：3人</p>
-                                    <p className="join-info">薪资：底薪+提成</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </section>
-                    <div className="job-description">
-                        <div className="job-photo"></div>
-                        <div className="job-text">
-                            <p>欢迎大家来到妙味课堂，在这里，公司文化轻松包容，且呈多元化发展倾向，职位晋级标准清晰量化，虽有上下级职称、却无论资排辈陋习……</p>
-                            <p className="job-explain">本招聘信息长期有效</p>
-                        </div>
-                    </div>
-                    <Footer />
-                </div>
-                <div className="popup">
-                    <div className="popup-win">
-                        <div className="popup-photo"></div>
-                        <h3 className="popup-title">莫涛-妙味课堂 全职讲师</h3>
-                        <div className="popup-con">
-                            <p>WEB强势品牌 HTML5梦工厂 联合 IT实体培训机构 妙味课堂 强强联手、为广大学员打造了崭新的IT培训新品牌：WEB学院，近期在上海开设第一个分点，为大家带来全新授课模式与最快乐的学习体验！</p>
-                            <p>课程总共设置5个月学习周期，共20多次快乐学员欢乐聚会、IT界著名大牛分享经验，力图让大家扎实学到实用IT技能、找到一份满意工作的同时，快乐享受IT技术、重新认识IT技术的有趣和惊喜！</p>
-                            <p>课程总共设置5个月学习周期，共20多次快乐学员欢乐聚会、IT界著名大牛分享经验，力图让大家扎实学到实用IT技能、找到一份满意工作的同时，快乐享受IT技术、重新认识IT技术的有趣和惊喜！</p>
-                            <p>课程总共设置5个月学习周期，共20多次快乐学员欢乐聚会、IT界著名大牛分享经验，力图让大家扎实学到实用IT技能、找到一份满意工作的同时，快乐享受IT技术、重新认识IT技术的有趣和惊喜！</p>
-                        </div>
-                        <a href="javascript:;" className="close"></a>
-                    </div>
+                    <Footer/>
                 </div>
             </div>
         );

@@ -1,156 +1,71 @@
-.course-item {
-	height: 5.42rem;
-	background: url('../img/course-bg.png') no-repeat;
-	background-size: cover;
+#page.course-page-wrap {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	background: url('../img/course.png') no-repeat 0 .9rem !important;
+	background-size: 100% auto;
+}
+.course-page {
+	flex: 1;
 }
 .course-title {
-	padding-top: .4rem;
+	padding-top: .5rem;
 	height: .76rem;
 	text-align: center;
 }
 .course-title img {
-	height: .76rem;
+	height: 100%;
 }
-.course-tab {
-	width: 100%;
-	overflow: hidden;
+.course-table {
+	margin: .62rem auto 0;
+	width: 7.1rem;
 }
-.course-list {
-	width: 400%;
-	overflow: hidden;
-	padding-top: .59rem;
-}
-.course-list li {
-	float: left;
-	box-sizing: border-box;
-	text-align: center;
-	width: 2.5rem;
-}
-.course-thumbnail {
-	margin: 0 auto;
-	display: block;
-	width: 1.7rem;
-	height: 1.7rem;
-	border: 4px solid #fff;
-	border-radius: 50%;
-	background: #5394cb url('../img/course/course.png') no-repeat center bottom;
-	background-size: contain;
-}
-.course-name {
-	margin: .2rem auto 0;
-	width: 1.2rem;
-	font: .26rem/.36rem "宋体";
-	text-align: center;
-	border: 2px solid #fff;
+.course-table th {
+	height: .5rem;
+	background: rgba(206, 115, 175, .5);
+	font-size: .24rem;
 	color: #fff;
-	border-radius: .18rem;
 }
-.course-nav {
-	padding-top: .4rem;
-	height: .1rem;
-	text-align: center;
-}
-.course-nav a {
-	vertical-align: top;
-	display: inline-block;
-	margin: 0 .1rem;
-	width: .3rem;
-	height: .1rem;
+.course-table td {
+	height: .57rem;
+	font-size: .26rem;
 	background: #fff;
-	opacity: .5;
-}
-.course-nav .active {
-	opacity: 1;
-}
-.join-us-title {
-	font: .4rem/1rem "宋体";
 	text-align: center;
+	border: 1px solid #ce73af;
+	color: #3a3a3a;
 }
-.join-con {
-	padding: 0 .21rem 1px;
-	overflow: hidden;
+.course-table td:nth-of-type(1) {
+	width: 1.35rem;
 }
-
-.join-con li {
-	float: left;
-	width: 3.54rem;
+.course-table td:nth-of-type(1) img {
+	width: .74rem;
 }
-
-.join-box {
-	margin: 0 0 -1px -1px;
-	padding-top: .85rem;
-	position: relative;
-	height: 2.63rem;
-	border: 1px solid #dce7eb;
+.course-table tr:nth-of-type(1) td:nth-of-type(2) {
+	width: 1.92rem;
+}
+.course-more {
 	text-align: center;
-	color: #666;
+	height: 1.13rem;
+	font-size: .26rem;
 }
-.join-tag {
-	position: absolute;
-	left: 1.07rem;
-	top: .29rem;
-	width: 1.4rem;
-	box-sizing: border-box;
-	font: .24rem/.38rem "宋体";
-	border: 1px solid #fff;
-	border-radius: .2rem;
-}
-.join-title {
-	font: .4rem/.58rem "宋体";
-	color: #e15671;
-}
-.join-info {
-	font: .26rem/.53rem "宋体";
-}
-
-.join-course .join-box {
-	background: url('../img/course/join-course.png') no-repeat;
-	background-size: cover;
+.course-more span {
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+	line-height: 1.13rem;
 	color: #fff;
 }
-
-.join-course .join-title {
-	color: #fff;
-}
-
-.join-adviser .join-box {
-	background: url('../img/course/join-adviser.png') no-repeat;
-	background-size: cover;
-}
-.join-service .join-box {
-	background: url('../img/course/join-server.png') no-repeat;
-	background-size: cover;
-}
-.join-assistant .join-box {
-	background: url('../img/course/join-assistant.png') no-repeat;
-	background-size: cover;
-}
-
-.job-description {
-	margin: .2rem;
-	padding: .3rem .4rem;
-	height: 2.04rem;
-	background: linear-gradient(32deg,#4d94e2,#4dc4e2);
-	box-shadow: 0 0 .1rem rgba(77, 168, 226, .7);	
-}
-.job-photo {
-	float: left;
-	margin-top: .18rem;
-	box-sizing: border-box;
-	width: 1.7rem;
-	height: 1.7rem;
-	border: 4px solid #fff;
-	border-radius: .85rem;
-	background: #a1d97b url('../img/course/job-photo.png') center bottom no-repeat;
-	background-size: contain;
-	box-shadow: 1px 1px 5px rgba(0, 0, 0, .2)
-}
-.job-text {
-	float: right;
-	width: 4.2rem;
-	font: .26rem/.4rem "宋体";
-	color: #fff;
-}
-.job-explain {
-	color: rgba(255, 255, 255, .5);
+.course-more a {
+	display: inline-block;
+	width: 2.9rem;
+	line-height: .5rem;
+	border-radius: .25rem;
+	color: #2f88cd;
+	margin-left: .25rem;
+	background: #fff;
 }
