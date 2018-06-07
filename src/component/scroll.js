@@ -5,10 +5,10 @@ export default class Scroll extends Component {
     constructor(arg){
         super(arg);
         let {lowerScroll} = this.props;
-        lowerScroll = lowerScroll?lowerScroll:100;
+        lowerScroll = lowerScroll?lowerScroll:200;
         this.state = {
             page: 1,
-            rows: 20,
+            rows: 10,
             listdata: [],
             isLoad: false,
             lowerScroll,
@@ -44,8 +44,11 @@ export default class Scroll extends Component {
             isLoad: true
         });
         axios.post(
-            `https://www.koocv.com/lecturer/lists?page=${page}&rows=${rows}`,
-            qs.stringify(getData(this.porps))
+            `https://www.koocv.com/lecturer/getcomment?page=${page}&rows=${rows}`,
+            qs.stringify(getData(this.props)),
+            {
+                withCredentials: true
+            }
         ).then((res)=>{
             console.log(res.data);
             if(res.data.length) {
@@ -62,12 +65,12 @@ export default class Scroll extends Component {
                 });
             }
         }).catch((res)=>{
-            console.log(res.data);
+          //  console.log(res.data);
         });
     }
     render(){
         let loadMore = <footer className="works-more"><span>{this.state.loadInfo}</span></footer>;
-         let List = this.props.render;
+        let List = this.props.render;
         return (
             <div ref="scroll">
                 {this.props.children}

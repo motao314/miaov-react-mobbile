@@ -6,9 +6,35 @@ import Login from "./view/login/index";
 import Lecturer from "./view/lecturer/index";
 import WorkDetails from "./view/work_details/index";
 import WorkMessage from "./view/work_message/index";
+import axios from "axios";
 require("./css/style.css");
 class App extends Component {
+    constructor(arg){
+        super(arg);
+        this.state = {
+            username:"",
+        }
+        this.getUser();
+    }
+    getUser=()=>{
+        axios.post(
+            "https://www.koocv.com//user/islogin",
+            "",
+            {
+                withCredentials:true
+            }
+        ).then((res)=>{
+           if(res.code === 0){
+               window.sessionStorage.setItem("username",res.username);
+           } else if(res.code === 1) {
+               window.sessionStorage.removeItem("username");
+           }
+        }).catch((res)=>{
+            console.log(res);
+        })
+    }
     componentDidUpdate(){
+        this.getUser();
         setTimeout(function(){
             window.scrollTo(0,0);
         });
@@ -20,7 +46,6 @@ class App extends Component {
             <Route path="/course" component={Course} />
             <Route path="/login"  render={()=>{
                 let username = window.sessionStorage.getItem("username");
-                console.log(username);
                 if(username){
                     return <Redirect to="/" />
                 } else {
@@ -29,7 +54,15 @@ class App extends Component {
             }} />
             <Route path="/lecturer" component={Lecturer} />
             <Route path="/workdetails/:id" component={WorkDetails} />
-            <Route path="/workmessage/:id" component={WorkMessage} />
+            <Route path="/workmessage/:id" render={(props)=>{
+                let username = window.sessionStorage.getItem("username");
+                if(!username){
+                    return <Redirect to="/login" />
+                } else {
+                    return <WorkMessage {...props} />;
+                }
+            }
+            } />
           </Switch>
         );
 }

@@ -125,7 +125,7 @@ export default class Tab extends Component {
                         </li>);
                     })}
                 </ul>
-                {data.length?nav:""}
+                {data.length>1?nav:""}
             </div>
         );
     }

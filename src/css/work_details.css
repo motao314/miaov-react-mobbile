@@ -2,40 +2,6 @@
 	background: #fff;
 	padding-bottom: 1rem;
 }
-#banner {
-	position: relative;
-	height: 4.6rem;
-	overflow: hidden;
-}
-#banner .picList {
-	width: 30rem;
-}
-#banner .picList li {
-	float: left;
-}
-#banner .picList img {
-	width: 7.5rem;
-}
-#banner .nav {
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: .2rem;
-	height: .1rem;
-	font-size: 0;
-	text-align: center;
-}
-#banner .nav a {
-	margin: 0 .1rem;
-	vertical-align: top;
-	display: inline-block;
-	width: .3rem;
-	height: .1rem;
-	opacity: .5;
-}
-#banner .nav .active {
-	opacity: 1;
-}
 .work-title {
 	padding: .2rem .2rem;
 	font: bold .36rem/.7rem "微软雅黑";
@@ -130,4 +96,15 @@
 	font-size: .5rem;
 	vertical-align: top;
 	margin-right: .2rem;
+}
+.isGood {
+	color: #f00;
+}
+.work-no-info {
+	border-top: 1px solid #000;
+	font-size: .4rem;
+	line-height: 2rem;
+	text-align: center;
+	color: #333;
+	margin: 0 .2rem;
 }

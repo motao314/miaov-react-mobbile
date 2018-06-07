@@ -112,10 +112,12 @@ textarea {
 }
 
 #page {
+	box-sizing: border-box;
 	position: relative;
 	padding-top: .9rem;
 	z-index: 4;
 	background: #f4fbfe;
+	min-height: 100vh;
 	/* transform: translateX(225px); */
 }
 #header {
@@ -312,4 +314,71 @@ textarea {
 #root {
 	overflow-x: hidden;
 	position: relative;
+}
+
+@keyframes loadAnimate {
+	0%{
+		background: #aaa;
+	}
+	100% {
+		background: #bbb;
+	}
+}
+
+#load-animate {
+	margin: 0 auto;
+	width: 90%;
+}
+.load-animate-row {
+	display: flex;
+	padding: 5px 0;
+}
+.load-animate-ceil {
+	flex: 1;
+	margin: 0 5px;
+	height: 10px;
+	background: #999;
+	animation: .5s loadAnimate infinite alternate;
+}
+
+#banner {
+	position: relative;
+	height: 4.6rem;
+	overflow: hidden;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+#banner .picList {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	width: 30rem;
+}
+#banner .picList li {
+	float: left;
+}
+#banner .picList img {
+	width: 7.5rem;
+	height: 4.6rem;
+	background: #4d94e2;
+}
+#banner .nav {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: .2rem;
+	height: .1rem;
+	font-size: 0;
+	text-align: center;
+}
+#banner .nav a {
+	margin: 0 .1rem;
+	vertical-align: top;
+	display: inline-block;
+	width: .3rem;
+	height: .1rem;
+	background: #fff;
+	opacity: .5;
+}
+#banner .nav .active {
+	opacity: 1;
 }

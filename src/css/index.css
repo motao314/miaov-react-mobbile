@@ -1,42 +1,4 @@
-#banner {
-	position: relative;
-	height: 4.6rem;
-	overflow: hidden;
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-}
-#banner .picList {
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	width: 30rem;
-}
-#banner .picList li {
-	float: left;
-}
-#banner .picList img {
-	width: 7.5rem;
-}
-#banner .nav {
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: .2rem;
-	height: .1rem;
-	font-size: 0;
-	text-align: center;
-}
-#banner .nav a {
-	margin: 0 .1rem;
-	vertical-align: top;
-	display: inline-block;
-	width: .3rem;
-	height: .1rem;
-	background: #fff;
-	opacity: .5;
-}
-#banner .nav .active {
-	opacity: 1;
-}
+
 .curriculum {
 	overflow: hidden;
 	padding: .1rem;
@@ -241,6 +203,7 @@
 	padding-left: .15rem;
 	font-weight: normal;
 	max-width: 1.6rem;
+	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
