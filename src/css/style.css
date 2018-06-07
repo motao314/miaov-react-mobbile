@@ -144,7 +144,8 @@ textarea {
 	width: .8rem;
 }
 
-#loginBtn {
+#loginBtn,
+#loginTxt{
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -152,6 +153,16 @@ textarea {
 	height: .9rem;
 	text-align: center;
 	line-height: .9rem;
+}
+#loginTxt {
+	width: auto;
+	max-width: 1.6rem;
+	margin-right: .1rem;
+	font-size: .2rem;
+	color: #fff;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 #menuBtn:before,
@@ -270,13 +281,14 @@ textarea {
 	padding: 0 .2rem;
 	height: 5.5rem;
 	overflow: auto;
+	font: .26rem/.42rem "宋体";
+	color: #fff;
+	word-break: break-all;
 }
 .popup-con p {
 	position: relative;
 	margin: .2rem 0;
 	padding-left: .26rem;
-	font: .26rem/.42rem "宋体";
-	color: #fff;
 }
 .popup-con p:before {
 	content: "";

@@ -8,7 +8,7 @@ export default class Scroll extends Component {
         lowerScroll = lowerScroll?lowerScroll:100;
         this.state = {
             page: 1,
-            rows: 2,
+            rows: 20,
             listdata: [],
             isLoad: false,
             lowerScroll,
@@ -35,6 +35,9 @@ export default class Scroll extends Component {
         window.removeEventListener("scroll",this.toScroll)
     }
     loadMore(){
+        if(this.state.isLoad){
+            return ;
+        }
         let {listdata,page,rows} = this.state;
         let {getData} = this.props;
         this.setState({
@@ -44,6 +47,7 @@ export default class Scroll extends Component {
             `https://www.koocv.com/lecturer/lists?page=${page}&rows=${rows}`,
             qs.stringify(getData(this.porps))
         ).then((res)=>{
+            console.log(res.data);
             if(res.data.length) {
                 listdata = listdata.concat(res.data)
                 this.setState({

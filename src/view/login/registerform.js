@@ -53,12 +53,17 @@ export default class RegisterForm extends Component {
         }),{
             withCredentials:true
         }).then((res)=>{
-                console.log(res.data);
+                if(res.data.code == 0){
+                    window.sessionStorage.setItem("username",username);
+                    alert("注册成功");
+                    this.props.change(0);
+                } else {
+                    alert(res.data.msg);
+                }
                 this.verifyCodeChange();
             })
             .catch((res)=>{
                 console.log(res);
-                this.verifyCodeChange();
             })
     }
     render(){

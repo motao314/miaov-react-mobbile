@@ -54,7 +54,11 @@ export default class MenuPage extends Component {
                     isMenu={true}
                     openMenu = {this.openMenu}
                 />
-                <div ref="page" id="page" className={this.props.className}>
+                <div
+                    ref="page"
+                    id="page"
+                    className={this.props.className}
+                >
                     {this.props.children}
                 </div>
             </div>

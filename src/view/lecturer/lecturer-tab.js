@@ -55,7 +55,31 @@ export default class LecturerTab extends Component {
                     return (
                         <ul className="lecturer-list">
                             {item.map((item)=>{
-                                return (<li key={item.id} data-id={item.id}>
+                                return (<li
+                                        key={item.id}
+                                        data-id={item.id}
+                                        onTouchStart={
+                                            (e)=>{
+                                                e.currentTarget.point = {
+                                                    x: e.changedTouches[0].pageX,
+                                                    y: e.changedTouches[0].pageY
+                                                }
+                                            }
+                                        }
+                                        onTouchEnd={
+                                            (e)=>{
+                                                 let nowPoint = {
+                                                     x: e.changedTouches[0].pageX,
+                                                     y: e.changedTouches[0].pageY
+                                                 };
+                                                 let {point} = e.currentTarget;
+                                                 if(Math.abs(nowPoint.x - point.x)+Math.abs(nowPoint.y - point.y)<1){
+                                                        let id = e.currentTarget.dataset.id;
+                                                        this.props.show(id);
+                                                 }
+                                            }
+                                        }
+                                >
                                     <a>
                                         <div
                                             className="lecturer-thumbnail"

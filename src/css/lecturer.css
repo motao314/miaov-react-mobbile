@@ -1,3 +1,9 @@
+#page.lecturer-page {
+	position: fixed;
+	box-sizing: border-box;
+	height: 100%;
+	overflow: auto;
+}
 .lecturer-item {
 	height: 5.42rem;
 	background: url('../img/lecturer-bg.png') no-repeat;
@@ -48,11 +54,15 @@
 .lecturer-name {
 	margin: .2rem auto 0;
 	width: 1.2rem;
-	font: .26rem/.36rem "宋体";
+	padding: 0 .1rem;
+	font: .26rem/.5rem "宋体";
 	text-align: center;
 	border: 2px solid #fff;
 	color: #fff;
-	border-radius: .18rem;
+	border-radius: .26rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 #lecturer-tab .nav {
 	padding-top: .4rem;

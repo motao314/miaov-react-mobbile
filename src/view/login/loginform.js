@@ -52,12 +52,17 @@ export default class LoginForm extends Component {
         }),{
             withCredentials:true
         }).then((res)=>{
-            console.log(res.data);
+            if(res.data.code == 0){
+                window.sessionStorage.setItem("username",username);
+                alert("登陆成功");
+                window.history.back();
+            } else {
+                alert(res.data.msg);
+            }
             this.verifyCodeChange();
         }).catch((res)=>{
-                console.log(res);
-                this.verifyCodeChange();
-            })
+            console.log(res);
+        })
     }
     render(){
         return (
@@ -79,10 +84,10 @@ export default class LoginForm extends Component {
                     </div>
                     <img className="input-verify-img" src={this.state.verifyImg} onTouchEnd={this.verifyCodeChange} />
                 </div>
-                <div className="input-record">
-                    <input type="checkbox" id="record" checked={this.state.record} onChange={this.recordChange} />
-                    <label htmlFor="record">记住密码</label>
-                </div>
+                {/*<div className="input-record">*/}
+                    {/*<input type="checkbox" id="record" checked={this.state.record} onChange={this.recordChange} />*/}
+                    {/*<label htmlFor="record">记住密码</label>*/}
+                {/*</div>*/}
                 <a href="javascript:;" className="input-btn" onClick={this.toLogin}>登陆</a>
                 <p className="login-info">没有帐号？<a href="javascript:;" className="to-register" onClick={()=>{
                     this.props.change(180);
