@@ -24,7 +24,9 @@ export default class WorkDetails extends Component {
             "https://www.koocv.com/lecturer/info",
             qs.stringify({
                 article_id: id
-            })
+            }),{
+                withCredentials: true
+            }
         ).then((res)=>{
             if(!res.data.title){
                 alert("文章不存在");

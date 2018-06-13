@@ -11,19 +11,18 @@ export default class Details extends Component {
             username,
             good: parseInt(this.props.data.good),
             isGood: false,
-            id: this.props.id
+            id: this.props.id,
+            setGood: false
         }
-        if(username){
-            this.getGood(()=>{
-                this.setState({
-                    isGood: true
-                });
+        this.getGood(()=>{
+            this.setState({
+                isGood: true
             });
-        }
+        });
     }
     getGood =(cb,cb2,cb3)=>{
         axios.post(
-            "https://www.koocv.com/lecturer/getgood",
+            "/yanzheng/lecturer/getgood",
             qs.stringify({
                 article_id: this.state.id
             }),{
@@ -42,18 +41,23 @@ export default class Details extends Component {
         })
     }
     goodHandler=()=>{
+        if(this.state.setGood){
+            return;
+        }
+        this.state.setGood = true;
         this.getGood((goodid)=>{
             this.goodCancel(goodid);
         },()=>{
             this.goodAdd();
         },()=>{
+            this.state.setGood = false;
             alert("请先登录");
             this.props.push("../login");
         })
     }
     goodAdd=()=>{
         axios.post(
-            "https://www.koocv.com/lecturer/good",
+            "/yanzheng/lecturer/good",
             qs.stringify({
                 article_id: this.state.id
             }),{
@@ -66,7 +70,8 @@ export default class Details extends Component {
                 good += 1;
                 this.setState({
                     isGood,
-                    good
+                    good,
+                    setGood:false
                 })
             }
         }).catch((res)=>{
@@ -75,7 +80,7 @@ export default class Details extends Component {
     }
     goodCancel=(goodid)=>{
         axios.post(
-            "https://www.koocv.com/lecturer/cancelgood",
+            "/yanzheng/lecturer/cancelgood",
             qs.stringify({
                 goodid,
                 article_id: this.state.id
@@ -89,7 +94,8 @@ export default class Details extends Component {
             good -= 1;
             this.setState({
                 isGood,
-                good
+                good,
+                setGood:false
             })
           }
         }).catch((res)=>{
@@ -100,7 +106,10 @@ export default class Details extends Component {
         let con = this.refs.workContent;
         let imgs = Array.from(con.querySelectorAll("img"));
         imgs.forEach((img)=>{
-            img.src = "https://www.koocv.com"+img.getAttribute("src");
+            let src = img.getAttribute("src");
+            if(src.substr(0,4) !== "http"){
+                img.src = "https://www.koocv.com"+img.getAttribute("src");
+            }
         });
     }
     render(){
@@ -127,10 +136,10 @@ export default class Details extends Component {
             </article>
             <div className="work-aside">
                 <span className="good">有{good}人觉得很赞</span>
-                <span
+                <a
                     className={`iconfont icon-zan ${isGood?"isGood":""}`}
                     onTouchEnd={this.goodHandler}
-                ></span>
+                ></a>
             </div>
         </div>);
     }

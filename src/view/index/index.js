@@ -36,9 +36,7 @@ export default class Index extends Component {
                         activeClass = "active"
                         data={tabImgs}
                         renderItem={(item)=>{
-                            return (<a>
-                                <img src={item} />
-                            </a>)
+                            return (<img src={item} />)
                         }}
                     />
                     <Curriculum />

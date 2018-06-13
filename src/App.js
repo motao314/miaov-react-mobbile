@@ -18,24 +18,26 @@ class App extends Component {
     }
     getUser=()=>{
         axios.post(
-            "https://www.koocv.com//user/islogin",
+            "/yanzheng/user/islogin",
             "",
             {
                 withCredentials:true
             }
         ).then((res)=>{
-           if(res.code === 0){
-               window.sessionStorage.setItem("username",res.username);
-           } else if(res.code === 1) {
-               window.sessionStorage.removeItem("username");
+            console.log(res.data);
+           if(res.data.code === 0){
+               window.sessionStorage.setItem("user",res.data.username);
+           } else if(res.data.code === 1) {
+               window.sessionStorage.removeItem("user");
            }
         }).catch((res)=>{
             console.log(res);
         })
     }
     componentDidUpdate(){
-        this.getUser();
+        let _this = this;
         setTimeout(function(){
+            _this.getUser();
             window.scrollTo(0,0);
         });
     }
@@ -45,7 +47,7 @@ class App extends Component {
             <Route exact path="/" component={Index} />
             <Route path="/course" component={Course} />
             <Route path="/login"  render={()=>{
-                let username = window.sessionStorage.getItem("username");
+                let username = window.sessionStorage.getItem("user");
                 if(username){
                     return <Redirect to="/" />
                 } else {
@@ -55,7 +57,7 @@ class App extends Component {
             <Route path="/lecturer" component={Lecturer} />
             <Route path="/workdetails/:id" component={WorkDetails} />
             <Route path="/workmessage/:id" render={(props)=>{
-                let username = window.sessionStorage.getItem("username");
+                let username = window.sessionStorage.getItem("user");
                 if(!username){
                     return <Redirect to="/login" />
                 } else {

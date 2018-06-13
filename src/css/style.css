@@ -56,8 +56,14 @@ body {
 }
 a,
 button {
-	-webkit-tap-highlight-color: transparent;	
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	text-decoration: none;
+}
+a:active {
+	opacity: .8;
+}
+.a-active {
+	opacity: .8;
 }
 .clear {
 	display: table;
@@ -282,10 +288,11 @@ textarea {
 	margin-top: .1rem;
 	padding: 0 .2rem;
 	height: 5.5rem;
-	overflow: auto;
 	font: .26rem/.42rem "宋体";
 	color: #fff;
 	word-break: break-all;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
 }
 .popup-con p {
 	position: relative;
@@ -381,4 +388,15 @@ textarea {
 }
 #banner .nav .active {
 	opacity: 1;
+}
+.wrapper {
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+.content {
+	padding-top: .9rem;
 }

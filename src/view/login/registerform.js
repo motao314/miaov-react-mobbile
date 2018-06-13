@@ -5,9 +5,9 @@ export default class RegisterForm extends Component {
     constructor(arg){
         super(arg);
         this.state = {
-            username: "miaov_leo",
-            password: "miaov123",
-            repassword: "miaov123",
+            username: "",
+            password: "",
+            repassword: "",
             verify: "",
             verifyImg: "https://www.koocv.com/user/verify"+"?"+Date.now()
         };
@@ -45,7 +45,7 @@ export default class RegisterForm extends Component {
     }
     toRegister(){
         let {username,password,repassword,verify} = this.state;
-        axios.post("https://www.koocv.com/user/register",qs.stringify({
+        axios.post("/yanzheng/user/register",qs.stringify({
             username,
             password,
             repassword,

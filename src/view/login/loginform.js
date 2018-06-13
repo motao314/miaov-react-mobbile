@@ -5,11 +5,11 @@ export default class LoginForm extends Component {
     constructor(arg){
         super(arg);
         this.state = {
-            username: "miaov",
-            password: "miaov123",
+            username: "",
+            password: "",
             verify: "",
             record: true,
-            verifyImg: "https://www.koocv.com/user/verify"+"?"+Date.now()
+            verifyImg: "/yanzheng/user/verify"+"?"+Date.now()
         };
         this.userNameChange = this.userNameChange.bind(this);
         this.passwordChange = this.passwordChange.bind(this);
@@ -45,7 +45,9 @@ export default class LoginForm extends Component {
     }
     toLogin(){
         let {username,password,verify} = this.state;
-        axios.post("https://www.koocv.com/user/login",qs.stringify({
+        username = 'motao'
+        password = 'motao'
+        axios.post("/yanzheng/user/login",qs.stringify({
             username,
             password,
             verify
@@ -53,8 +55,8 @@ export default class LoginForm extends Component {
             withCredentials:true
         }).then((res)=>{
             if(res.data.code == 0){
-                window.sessionStorage.setItem("username",username);
                 alert("登陆成功");
+                window.sessionStorage.setItem("user",username);
                 window.history.back();
             } else {
                 alert(res.data.msg);

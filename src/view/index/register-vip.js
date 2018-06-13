@@ -8,6 +8,6 @@ export default function RegisterVip(){
         </p>
         <p className="vip-info">凝聚妙味全体讲师知识精华，尽在妙味VIP！</p>
         <p className="vip-price">仅需￥199元</p>
-        <a className="vip-btn">立即报名</a>
+        <a className="vip-btn" href="https://study.miaov.com/study">立即报名</a>
     </section>)
 }

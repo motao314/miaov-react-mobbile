@@ -25,7 +25,7 @@ export default class WorkMessage extends Component {
             return ;
         }
         axios.post(
-            "https://www.koocv.com/lecturer/addcomment",
+            "/yanzheng/lecturer/addcomment",
             qs.stringify({
                 article_id:id,
                 content: message

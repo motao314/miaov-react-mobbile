@@ -2,7 +2,7 @@ import React,{Component} from "react";
 import {Link} from "react-router-dom";
 export default class Header extends Component {
     render(){
-        let usename = window.sessionStorage.getItem("username");
+        let usename = window.sessionStorage.getItem("user");
         return (
             <header id="header">
                 <h1 id="logo">
