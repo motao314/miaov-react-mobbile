@@ -45,8 +45,6 @@ export default class LoginForm extends Component {
     }
     toLogin(){
         let {username,password,verify} = this.state;
-        username = 'motao'
-        password = 'motao'
         axios.post("/yanzheng/user/login",qs.stringify({
             username,
             password,
